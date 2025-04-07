@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
+
 
 # Set up the page
 st.set_page_config(page_title="IPL Dashboard", layout="wide")
