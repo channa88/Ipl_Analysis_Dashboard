@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 
 # Set up the page
 st.set_page_config(page_title="IPL Dashboard", layout="wide")
@@ -26,13 +25,7 @@ st.bar_chart(top_players)
 # Wins by Team
 st.subheader("🏆 Matches Won by Teams")
 team_wins = df['winner'].value_counts()
-fig1, ax1 = plt.subplots(figsize=(10, 6))
-ax1.barh(team_wins.index, team_wins.values, color='orange')
-ax1.set_xlabel("Number of Wins")
-ax1.set_ylabel("Team")
-ax1.set_title("Total Wins by Team")
-ax1.invert_yaxis()
-st.pyplot(fig1)
+st.bar_chart(team_wins)
 
 # Matches per Season
 st.subheader("📅 Matches Played Per Season")
